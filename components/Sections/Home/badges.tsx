@@ -3,15 +3,14 @@ import p1 from "@/public/assets/p1.png"
 import Image from 'next/image'
 function badges() {
   return (
-    <div className='max-container flex flex-col items-center justify-center gap-5 my-20  '>
-      <div className='my-10 text-center'>
-        <p>لم يكتمل </p>
-        <h1 className=' text-5xl text-[#9E276A]  font-bold'>إختار باقتك بعنايه </h1>
+    <div className='max-container flex flex-col items-center justify-center gap-5 lg:my-20 mb-20  '>
+      <div className=' lg:w-full w-[80%] my-10 text-center'>
+        <h1 className=' md:text-5xl text-4xl mb-2 text-[#9E276A] tracking-tight  font-bold'>إختار باقتك التسويقيه بعنايه </h1>
         <p>باقات تلبي كل احتياجاتك</p>
       </div>
-      <div className='flex flex-row gap-3'>
+      <div className='flex lg:flex-row flex-col lg:gap-4 gap-10'>
         <div className=' flex flex-col items-center justify-center w-80 border-[1px] py-10 rounded-md shadow-md'>
-          <h1 className=' font-bold text-3xl mb-3'>الأساسيه</h1>
+          <h1 className=' font-bold text-3xl mb-3 text-[#9E276A]'>الأساسيه</h1>
           <Image className='h-fit' src={p1} alt='po'/>
           <h1 dir='ltr' className=' font-medium text-3xl'>150 <span className=' text-sm'>K.D</span></h1>
           <ul className=' mt-10 w-[90%] mx-5'>

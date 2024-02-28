@@ -1,7 +1,6 @@
 "use client"
 import React from 'react'
-import Hedear from '@/components/Hedear'
-import { Navigation_Menu } from '@/components/Ui Components/Navigation_Menu'
+import Hedear from '@/components/shared/Hedear'
 import Image from 'next/image'
 import { back_photo,back_photo2 } from '@/public/assets'
 import Link from 'next/link'

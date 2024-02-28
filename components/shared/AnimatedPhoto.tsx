@@ -5,7 +5,6 @@ import hero_Photo from '@/public/assets/design.png'
 import Image from 'next/image'
 import {motion} from 'framer-motion'
 
-
 const qout ={
 
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import photo7 from "../public/assets/photo7.png"
+import photo7 from "@/public/assets/photo7.png"
 function AccountSection() {
   return (
     <div className=' max-container flex flex-col lg:flex-row justify-center items-center min-h-screen pt-10 '>

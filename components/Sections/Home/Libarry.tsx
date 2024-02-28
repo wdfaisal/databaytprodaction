@@ -1,8 +1,9 @@
 "use client"
 
 import React from 'react'
-import { photo,photo1,photo3,photo2,photo4,back_photo,back_photo2 } from '@/public/assets'
-import { ParallaxScrollSecond } from './ui/parallax-scroll';
+import { ParallaxScrollSecond } from '../../ui/parallax-scroll';
+import { useRef } from 'react';
+
 
 
 function Libarry() {
@@ -34,26 +35,17 @@ function Libarry() {
     "https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80",
   ];
    
+  const gridRef = useRef<any>(null);
+ 
   return (
    <>
-   <div className=' max-container  mt-10 flex lg:flex-row justify-between items-center '>
-   <div className=' w-[60%]'>
-    <ParallaxScrollSecond  images={images} />
+   <div ref={gridRef} className=' max-container bg-black h-[150vh]  mt-10 flex lg:flex-col justify-between items-center '>
+   <div className=' h-full w-full'>
+    <ParallaxScrollSecond refe={gridRef} images={images} />
     </div>
+<h1>خدمات التصوير</h1>
    
-    <div className='w-1/3 mr-10'>
-      <h1 className=' text-md'>خدمات التصوير </h1>
-      <h1 className=' text-2xl '>تصوير احترافي يوضح تفاصيل منتجك </h1>
-      <ul className=' mt-5'>
-        <li>تصوير منتجات </li>
-        <li>تصوير درون</li>
-        <li>تصوير مناسبات</li>
-        <li>تصوير ريلس وسناب </li>
-
-        
-      </ul>
-      
-    </div>
+   
     </div>
    
    </>

@@ -1,5 +1,6 @@
 import React from 'react'
-import { HeroParallax } from './ui/hero-parallax';
+import { HeroParallax } from '../../ui/hero-parallax';
+import Link from 'next/link';
 
 function WebDesign() {
     const products = [
@@ -101,7 +102,11 @@ function WebDesign() {
     <div className=' bg-gray-50 md:mt-10 w-full h-full'>
         <HeroParallax products={products} />
 
-        <div className=' flex justify-center item-center md:py-10'> <h1 className=' text-[#9E276A] text-3xl'>اطلب تصميمك الان </h1></div>
+        <div className=' flex justify-center item-center pb-10 md:py-10'>
+           <Link href='/' className=' flex justify-center items-center text-[#9E276A] font-medium text-3xl border-2 py-3 px-5 text-center rounded-xl bg-white shadow-sm'>
+            اطلب تصميمك الان 
+            </Link>
+        </div>
     </div>
   )
 }
