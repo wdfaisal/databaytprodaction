@@ -30,24 +30,24 @@ const components: { title: string; href: string; description: string }[] = [
       "you can start now for free take the road end enplemant in your company",
   },
   {
-    title: "خدمات التصوير",
+    title: "Contrbuite",
     href: "/docs",
     description:
     "you can start now for free take the road end enplemant in your company",
   },
   {
-    title: "خدمات التسويق",
+    title: "Contrbuite",
     href: "/docs/primitives/scroll-area",
     description: "you can start now for free take the road end enplemant in your company",
   },
   {
-    title: "خدمات التصميم",
+    title: "Contrbuite",
     href: "/docs/primitives/tabs",
     description:
     "you can start now for free take the road end enplemant in your company",
   },
   {
-    title: "الاعلان مع المشاهير",
+    title: "Contrbuite",
     href: "/docs/primitives/tooltip",
     description:
     "you can start now for free take the road end enplemant in your company",
@@ -59,7 +59,7 @@ export function NavMenu() {
     <NavigationMenu className=" gap-0" >
       <NavigationMenuList >
       <NavigationMenuItem className=" bg-transparent text-sm">
-          <Link href="/" legacyBehavior passHref>
+          <Link href="/Docs" legacyBehavior passHref>
             <NavigationMenuLink  className={navigationMenuTriggerStyle()}>
             Pricing
             </NavigationMenuLink>
@@ -85,13 +85,13 @@ export function NavMenu() {
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="Get start">
+              <ListItem href="/Docs" title="Get start">
               you can start now for free take the road end enplemant in your company
               </ListItem>
-              <ListItem href="/docs/installation" title="صمم اعلانك ">
+              <ListItem href="/Docs/installation" title="Club">
               you can start now for free take the road end enplemant in your company
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="تصوير منتجاتك">
+              <ListItem href="/docs/primitives/typography" title="Community">
               you can start now for free take the road end enplemant in your company
               </ListItem>
             </ul>

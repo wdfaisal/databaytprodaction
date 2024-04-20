@@ -11,11 +11,11 @@
 function HeroSection() {
 
   return (
-    <main className=''>
+    <main className='z-100'>
        
        <div className='max-container relative flex flex-col w-full justify-between items-center lg:flex-row lg:overflow-hidden lg:min-h-screen pt-10 lg:pt-0 px-10 '>
          
-         <div className='  flex items-start -mt-[150px] md:-mt-[90px] '>
+         <div className='  flex items-start -mt-[150px] md:-mt-[150px] '>
           {/**here is the scroll contaner whis the heder text */}
             <div className="flex flex-col overflow-hidden">
                 <ContainerScroll

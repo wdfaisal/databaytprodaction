@@ -9,6 +9,7 @@ import  { useState } from "react";
 import { MultiStepLoader as Loader } from "@/components/ui/multi-step-loader";
 import { IconSquareRoundedX } from "@tabler/icons-react";
 import { useRouter } from 'next/navigation'
+import DarkModeButton from "@/components/ui/DarkModeButton"
 
 
 const loadingStates = [
@@ -42,7 +43,7 @@ function Hedear() {
   const [loading, setLoading] = useState(false);
   const handelclick =()=>{
     setLoading (true);
-    setTimeout(()=>{setLoading(false); router.replace('/Docs')},17000)
+    setTimeout(()=>{setLoading(false); router.replace('https://www.eco.databayt.org/')},17000)
   }
 
 
@@ -80,6 +81,7 @@ function Hedear() {
         
 
         <div className=' flex flex-row gap-5 '>
+          <DarkModeButton/>
           <button onClick={handelclick} className='hover:bg-[#0C0B10] hover:border-[#0C0B10] font-bold bg-white border-[#ffe695] border-[1px] text-[#ffd447] py-2 px-3 rounded-lg shadow-sm text-sm'>
             Start For Free
           </button>

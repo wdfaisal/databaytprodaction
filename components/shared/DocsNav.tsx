@@ -1,8 +1,15 @@
+import Link from 'next/link'
 import React from 'react'
 
 function DocsNav() {
   return (
-    <div>DocsNav</div>
+    <div>
+      <Link href="/">
+      Docmantation
+
+      </Link>
+      
+    </div>
   )
 }
 

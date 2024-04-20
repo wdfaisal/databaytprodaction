@@ -8,7 +8,7 @@ import './globals.css'
 
 
 const inter = Inter({
-  weight: ['200','300','400','500','700'],
+  weight: ['100','300','400','500','700','900'],
   subsets: ['latin'],
 
 })
