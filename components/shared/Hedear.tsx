@@ -1,62 +1,97 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Link from 'next/link'
-
-import { Souq_logo,menu2 } from '@/public/assets';
-import CartDrawer from '../CartDrawer';
+import search from "@/public/assets/search.webp"
+import logo_icon from "@/public/assets/logo_icon.png"
 import Image from 'next/image';
 import NavMenu from './NavMenu';
+import  { useState } from "react";
+import { MultiStepLoader as Loader } from "@/components/ui/multi-step-loader";
+import { IconSquareRoundedX } from "@tabler/icons-react";
+import { useRouter } from 'next/navigation'
+
+
+const loadingStates = [
+  {
+    text: "Enter your company info",
+  },
+  {
+    text: "Selact your tools",
+  },
+  {
+    text: "Meeting The mantour",
+  },
+  {
+    text: "Install it in your pc",
+  },
+  {
+    text: "Start automation",
+  },
+  {
+    text: "Congratlation all done",
+  },
+  {
+    text: "You wiil be redairct now",
+  },
+ 
+];
+
 
 function Hedear() {
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
+  const handelclick =()=>{
+    setLoading (true);
+    setTimeout(()=>{setLoading(false); router.replace('/Docs')},17000)
+  }
+
+
  
-  
+ 
   return (
     <>
-    <nav className='max-container lg:fixed border-b-2 z-50 w-full flex items-center justify-between pt-0 px-5  md:left-1/2 md:transform md:-translate-x-1/2  '>
+      <nav className='max-container-extra w-full py-5 flex items-center justify-between px-5   '>
 
-      <div className=" flex items-center lg:w-1/4">
-        <Link href='/' className=' hover:scale-105'>
-          <Image className='lg:w-52 '
-           src={Souq_logo}
-           alt='logo' 
-           width={250} 
-           height={150}
-           />
-        </Link>
-      </div>
+          <div className=" absolute">
+              {/* Core Loader Modal */}
+              <Loader loadingStates={loadingStates} loading={loading} duration={2000} />
 
-  
-      <div className=' hidden md:flex'>
-        <NavMenu/>
-      </div>
-  
-        
-      <div className=' hidden lg:flex items-center justify-end w-1/4 gap-6'>
-        
-        <div>
-          <Link href="/" className=' cursor-pointer ml-3 hover:text-[#9E276A] text-sm text-[#9E276A]'>تسجيل</Link>
-          <Link href='/' className=' border-2 border-[#9E276A] py-1 px-3 rounded-md hover:bg-[#151B20] hover:text-white' >
-            تسجيل دخول
-          </Link>
+              {loading && (
+                <button
+                  className="fixed top-4 right-4 text-black dark:text-white z-[120]"
+                  onClick={() => setLoading(false)}
+                >
+                  <IconSquareRoundedX className="h-10 w-10" />
+                </button>
+              )}
         </div>
-        <CartDrawer/>
-      </div>
 
+        <div className=' flex flex-row gap-2'>
+          <Image className=' rounded-md' src={ logo_icon} alt='logo_icon ' width={30} height={25}></Image>
+          <div>
+            <h2 className=' text-lg font-medium text-[#0C0B10]'>Databayt</h2>
+          <p></p>
+          </div>
+        </div>
 
-       {/*togelmenu button in mobile dev */}
-       <div className=' lg:hidden flex flex-row gap-2'>
-       <button  >
-        <Image className='' src={menu2} alt='logo' width={32} height={32}/>
-       </button>
-      <CartDrawer/>
-      </div>
-      
-
-       
+        <div className=' hidden w-1/3 md:flex items-center justify-start'>
+          <NavMenu/>
+        </div>
         
-    </nav>
+
+        <div className=' flex flex-row gap-5 '>
+          <button onClick={handelclick} className='hover:bg-[#0C0B10] hover:border-[#0C0B10] font-bold bg-white border-[#ffe695] border-[1px] text-[#ffd447] py-2 px-3 rounded-lg shadow-sm text-sm'>
+            Start For Free
+          </button>
+          <button>
+            <Image src={search} alt='search_icon' width={20}/>
+          </button>
+        </div>
+
+      
+      </nav>
     </>
   )
-}
+};
 
 export default Hedear

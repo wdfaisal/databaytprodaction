@@ -18,87 +18,87 @@ import {
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "متجر الخدمات",
+    title: "Get start ",
     href: "/store",
     description:
-      "متجر يحتوي على اكثر من 100 خدمه مختلفه تلبي جميع متطلباتك في مكان واحد ",
+      "you can start now for free take the road end enplemant in your company",
   },
   {
-    title: "خدمات الطباعه",
+    title: "Doc",
     href: "/print",
     description:
-      "ألان يمكنك طباعة كل احتياجات مشروعك عبر سوق ميديا طباعة كروت منشورات كروت تسويق",
+      "you can start now for free take the road end enplemant in your company",
   },
   {
     title: "خدمات التصوير",
     href: "/docs",
     description:
-    "ألان يمكنك طباعة كل احتياجات مشروعك عبر سوق ميديا طباعة كروت منشورات كروت تسويق",
+    "you can start now for free take the road end enplemant in your company",
   },
   {
     title: "خدمات التسويق",
     href: "/docs/primitives/scroll-area",
-    description: "ألان يمكنك طباعة كل احتياجات مشروعك عبر سوق ميديا طباعة كروت منشورات كروت تسويق",
+    description: "you can start now for free take the road end enplemant in your company",
   },
   {
     title: "خدمات التصميم",
     href: "/docs/primitives/tabs",
     description:
-    "ألان يمكنك طباعة كل احتياجات مشروعك عبر سوق ميديا طباعة كروت منشورات كروت تسويق",
+    "you can start now for free take the road end enplemant in your company",
   },
   {
     title: "الاعلان مع المشاهير",
     href: "/docs/primitives/tooltip",
     description:
-    "ألان يمكنك طباعة كل احتياجات مشروعك عبر سوق ميديا طباعة كروت منشورات كروت تسويق",
+    "you can start now for free take the road end enplemant in your company",
   },
 ]
 
 export function NavMenu() {
   return (
-    <NavigationMenu dir="rtl">
-      <NavigationMenuList>
-      <NavigationMenuItem className=" bg-transparent">
+    <NavigationMenu className=" gap-0" >
+      <NavigationMenuList >
+      <NavigationMenuItem className=" bg-transparent text-sm">
           <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink  className={navigationMenuTriggerStyle()}>
-             الرئيسيه
+            Pricing
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className=" bg-transparent" >حملات تسويقيه</NavigationMenuTrigger>
+          <NavigationMenuTrigger className=" bg-transparent text-sm text-gray-500" >Documentation</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted backimg p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
+                    href="/Docs"
                   >
                     {/*<Icons.logo className="h-6 w-6" />*/}
                     <div className="mb-2 mt-4 text-lg font-medium">
-                      إدارة حسابات 
+                      Docs
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                     خدمت ادارة الحساب من الالف الى الياء بباقات مختلفة يمكنك تصميمها .
+                     Read the system documentation 
                     </p>
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="أطلق خملتك التسويقيه">
-                باقات مخصصه لتلبي جميع متطلباتك واحتياجاتك 
+              <ListItem href="/docs" title="Get start">
+              you can start now for free take the road end enplemant in your company
               </ListItem>
               <ListItem href="/docs/installation" title="صمم اعلانك ">
-                تصميم اعلان مخصص للوصول الى جمهورك المستهدف بطريقه ابداعيه
+              you can start now for free take the road end enplemant in your company
               </ListItem>
               <ListItem href="/docs/primitives/typography" title="تصوير منتجاتك">
-                تصوير احترافي يظهر منتجك على اكمل وجه
+              you can start now for free take the road end enplemant in your company
               </ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className=" bg-transparent">متجر الخدمات</NavigationMenuTrigger>
+          <NavigationMenuTrigger className=" bg-transparent text-sm text-gray-500">Tools</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {components.map((component) => (
@@ -113,10 +113,10 @@ export function NavMenu() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem >
+        <NavigationMenuItem className=" text-sm text-gray-500" >
           <Link href="/docs" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              تواصل معنا
+              Suport
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
@@ -140,7 +140,7 @@ const ListItem = React.forwardRef<
           )}
           {...props}
         >
-          <div className="text-md font-medium leading-none">{title}</div>
+          <div className="text-sm font-medium leading-none">{title}</div>
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>

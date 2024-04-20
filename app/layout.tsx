@@ -2,29 +2,21 @@
 
 import type { Metadata } from 'next'
 
-import { Cairo, Tajawal } from 'next/font/google';
+import {Roboto, Inter } from 'next/font/google';
 
 import './globals.css'
 
 
-const tajawal = Cairo({
+const inter = Inter({
   weight: ['200','300','400','500','700'],
-  subsets: ['arabic'],
+  subsets: ['latin'],
 
 })
-
-const cairo = Tajawal({
-  weight: ['200','300','400','500','700'],
-  subsets: ['arabic'],
-
-})
-
-
 
 
 export const metadata: Metadata = {
-  title: 'Souq Media| سوق ميديا ',
-  description: ' ',
+  title: 'Databayt | داتابيت ',
+  description: 'business automation software companie',
 }
 
 export default function RootLayout({
@@ -34,10 +26,10 @@ export default function RootLayout({
 }) {
   return (
     <>
-    <html  lang="ar" dir='rtl'>
-    
-      <body className={tajawal.className} >
-        {children}</body>
+    <html lang="en" >
+      <body className={inter.className} >
+        {children}
+      </body>
     </html>
     </>
   )
