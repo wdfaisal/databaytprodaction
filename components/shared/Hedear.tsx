@@ -43,7 +43,7 @@ function Hedear() {
   const [loading, setLoading] = useState(false);
   const handelclick =()=>{
     setLoading (true);
-    setTimeout(()=>{setLoading(false); router.replace('https://www.eco.databayt.org/')},17000)
+    setTimeout(()=>{setLoading(false); router.replace('/Docs')},17000)
   }
 
 
