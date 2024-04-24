@@ -80,7 +80,7 @@ function Hedear() {
         </div>
         
 
-        <div className=' flex flex-row gap-5 '>
+        <div className=' flex flex-row gap-5 z-50 '>
           <DarkModeButton/>
           <button onClick={handelclick} className='hover:bg-[#0C0B10] hover:border-[#0C0B10] font-bold bg-white border-[#ffe695] border-[1px] text-[#ffd447] py-2 px-3 rounded-lg shadow-sm text-sm'>
             Start For Free
